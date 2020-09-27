@@ -10,8 +10,25 @@ class CartItem extends React.Component{
             img:''
         }
     }
+    //arrow function directly binds this pointer
     increaseQuantity = () => {
-        console.log('this',this.state)
+        //console.log('this',this.state);
+        //set state rerender our component with updated value 
+        
+        //setState form 1 
+        // this.setState(
+        //     {
+        //         qty : this.state.qty +1 
+        //     }
+        // );
+
+        //setState Form 2
+        this.setState((prevState)=>{
+            return{
+                qty :prevState.qty +1
+            }
+
+        });
     }
     render(){
         const {price,title,qty} = this.state;
