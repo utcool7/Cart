@@ -9,7 +9,8 @@ const Cart = (props) => {
             <div className="cart">
                 {products.map((product)=>{
                 return (
-                    <CartItem product = {product} 
+                    <CartItem 
+                    product = {product} 
                     key = {product.id}
                     onIncreaseQuantity={props.onIncreaseQuantity}
                     onDecreaseQuantity={props.onDecreaseQuantity }
